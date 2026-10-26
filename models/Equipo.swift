@@ -1,3 +1,5 @@
+// xcode: set sdk=iOS
+
 //
 //  Equipo.swift
 //  
@@ -8,8 +10,12 @@
 import Foundation
 
 //Definimos los atributos que contendrá este proyecto
-var id;
-var nombre;
-var descripcion;
-var imageNombre;
+struct Equipo: Identifiable {
+    
+    let idEquipo: UUID = UUID(); //identificador unico
+    let nombre: String; //nombre del equipo (ya sea un motor, una pantalla, entre otras cosas
+    let modeloTecnico: String; //Descripcion del modelo del equipo
+    let nombreAnclajeAR: String //busca el objeto para colocar su contenido
+    var piezas: [Pieza]; //arreglo donde estara el listado de piezas del equipo
+}
 
