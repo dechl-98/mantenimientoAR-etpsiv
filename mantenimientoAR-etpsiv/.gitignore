@@ -1,0 +1,57 @@
+# ==========================================
+# GitHub Official Template: Swift / Xcode
+# ==========================================
+
+# Xcode
+#.DS_Store
+# Build generated files
+build/
+DerivedData/
+
+# Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+# Other version control / system files
+*.xccheckpoint
+*.moved-aside
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+/*.xcodeproj/project.xcworkspace/xcuserdata/
+/*.xcodeproj/xcuserdata/
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Coverage
+*.gcov
+*.coverage
+*.coverage.*
+
+# CocoaPods (si se llegara a usar)
+Pods/
+
+# ==========================================
+# macOS System Files
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
