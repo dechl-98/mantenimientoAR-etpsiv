@@ -23,4 +23,14 @@ final class EquipoViewModel: ObservableObject {
     convenience init() {
             self.init(equipoService: EquipoService())
         }
+    
+    func cargarEquipos() async {
+        estaCargando = true
+        do {
+            equipos = try await equipoService.obtenerEquipos()
+        } catch {
+            print("Error al cargar equipos: ", error)
+        }
+        estaCargando = false
+    }
 }

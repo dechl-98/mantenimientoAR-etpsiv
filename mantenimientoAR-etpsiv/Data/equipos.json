@@ -1,0 +1,36 @@
+[
+    {
+       "id":"1",
+       "nombre":"Motor de inyeccion",
+       "marca":"Black&Decker",
+       "modelo":"60/1955",
+       "descripcion":"Motor con 60 caballos de fuerza, industrial a inyección.",
+       "imagenReferencia":null,
+       "tipoIdentificacion":"qr",
+       "nombreAnclajeAR":"assdd",
+       "piezas": [
+           {
+               "id": "1",
+               "nombre":"Faja de contension",
+               "descripcion":"Faja que sostiene la polea que conecta el motor con la sierra",
+               "advertencias": [
+                   "No tocar cuando el motor esté caliente.",
+                   "Utilizar guantes de aislamiento dieléctrico."
+               ],
+               "ordenVisualizacion": 1,
+               "nombreEntidad":"separacion_faja",
+               "instrucciones":[
+                   {
+                       "id": "inst_1",
+                       "orden": 1,
+                       "titulo": "Remoción de la cubierta",
+                       "descripcion": "Desatornille los pernos superiores para liberar el acceso a la bujía.",
+                       "herramientasNecesarias": ["Llave Allen 5mm", "Destornillador plano"],
+                       "advertenciaSeguridad": "Asegúrese de que el equipo esté desenergizado.",
+                       "nombreAnimacionAR": "anim_remover_cubierta"
+                   }
+               ]
+           }
+       ]
+    }
+]

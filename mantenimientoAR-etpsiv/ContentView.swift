@@ -6,15 +6,19 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Image(systemName: "wrench.and.screwdriver")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Mantenimiento AR - Base de Proyecto")
-                    .font(.title2)
-                    .padding(.top)
+                List(viewModel.equipos)
+                {
+                    equipo in NavigationLink(equipo.nombre){
+                        EquipoView(equipo: equipo)
+                    }
+                }
             }
             .padding()
             .navigationTitle("Inicio")
+            .task {
+                await viewModel.cargarEquipos()
+                print("En el ViewModel: ", viewModel.equipos.count)
+            }
         }
     }
 }
