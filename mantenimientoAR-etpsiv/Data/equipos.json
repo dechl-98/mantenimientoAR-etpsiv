@@ -1,36 +1,71 @@
 [
-    {
-       "id":"1",
-       "nombre":"Motor de inyeccion",
-       "marca":"Black&Decker",
-       "modelo":"60/1955",
-       "descripcion":"Motor con 60 caballos de fuerza, industrial a inyección.",
-       "imagenReferencia":null,
-       "tipoIdentificacion":"qr",
-       "nombreAnclajeAR":"assdd",
-       "piezas": [
-           {
-               "id": "1",
-               "nombre":"Faja de contension",
-               "descripcion":"Faja que sostiene la polea que conecta el motor con la sierra",
-               "advertencias": [
-                   "No tocar cuando el motor esté caliente.",
-                   "Utilizar guantes de aislamiento dieléctrico."
-               ],
-               "ordenVisualizacion": 1,
-               "nombreEntidad":"separacion_faja",
-               "instrucciones":[
-                   {
-                       "id": "inst_1",
-                       "orden": 1,
-                       "titulo": "Remoción de la cubierta",
-                       "descripcion": "Desatornille los pernos superiores para liberar el acceso a la bujía.",
-                       "herramientasNecesarias": ["Llave Allen 5mm", "Destornillador plano"],
-                       "advertenciaSeguridad": "Asegúrese de que el equipo esté desenergizado.",
-                       "nombreAnimacionAR": "anim_remover_cubierta"
-                   }
-               ]
-           }
-       ]
-    }
+  {
+    "id": "1",
+    "nombre": "Motor de inyeccion",
+    "marca": "Black&Decker",
+    "modelo": "60/1955",
+    "descripcion": "Motor con 60 caballos de fuerza, industrial a inyección.",
+    "imagenReferencia": null,
+    "tipoIdentificacion": "seleccionManual",
+    "nombreAnclajeAR": null,
+    "piezas": [
+      {
+        "id": "p1",
+        "nombre": "Polea",
+        "descripcion": "Componente de ejemplo para la demo: transmite el movimiento a las fajas.",
+        "advertencias": ["Contenido demostrativo, no sustituye indicaciones del fabricante"],
+        "ordenVisualizacion": 1,
+        "nombreEntidad": "polea_visual_ref",
+        "instrucciones": [
+          {
+            "id": "i1",
+            "orden": 1,
+            "titulo": "Inspección visual",
+            "descripcion": "Paso de ejemplo, no es un procedimiento oficial.",
+            "herramientasNecesarias": [],
+            "advertenciaSeguridad": null,
+            "nombreAnimacionAR": null
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "nombre": "Faja inferior",
+        "descripcion": "Componente de ejemplo para la demo.",
+        "advertencias": ["Contenido demostrativo, no sustituye indicaciones del fabricante"],
+        "ordenVisualizacion": 2,
+        "nombreEntidad": "faja_inf",
+        "instrucciones": [
+          {
+            "id": "i2",
+            "orden": 1,
+            "titulo": "Inspección visual",
+            "descripcion": "Paso de ejemplo, no es un procedimiento oficial.",
+            "herramientasNecesarias": [],
+            "advertenciaSeguridad": null,
+            "nombreAnimacionAR": null
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "nombre": "Faja superior",
+        "descripcion": "Componente de ejemplo para la demo.",
+        "advertencias": ["Contenido demostrativo, no sustituye indicaciones del fabricante"],
+        "ordenVisualizacion": 3,
+        "nombreEntidad": "faja_sup",
+        "instrucciones": [
+          {
+            "id": "i3",
+            "orden": 1,
+            "titulo": "Inspección visual",
+            "descripcion": "Paso de ejemplo, no es un procedimiento oficial.",
+            "herramientasNecesarias": [],
+            "advertenciaSeguridad": null,
+            "nombreAnimacionAR": null
+          }
+        ]
+      }
+    ]
+  }
 ]

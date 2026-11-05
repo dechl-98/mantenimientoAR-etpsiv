@@ -12,6 +12,11 @@ struct PiezaView: View {
     
     var body: some View {
         List {
+            Section{
+                ModeloView(entidadResaltada: pieza.nombreEntidad)
+                    .frame(height: 250)
+            }
+            
             Section("Descripción"){
                 Text(pieza.descripcion)
             }
