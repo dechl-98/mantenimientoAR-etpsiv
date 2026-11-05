@@ -23,6 +23,7 @@ struct ModeloView: View {
                 print("Error al cargar el modelo: ", error)
             }
           }
+        .realityViewCameraControls(.orbit)
         }
     func aplicarResaltado(a entidad: Entity) {
         if var modelo = entidad.components[ModelComponent.self]{
