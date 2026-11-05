@@ -12,6 +12,8 @@ struct EquipoView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12){
+            ModeloView(entidadResaltada: nil)
+                .frame(height: 250)
             List(equipo.piezas){
                 pieza in NavigationLink(destination: PiezaView(pieza: pieza)){
                     VStack(alignment: .leading){
