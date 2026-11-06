@@ -17,7 +17,6 @@ struct ContentView: View {
             .navigationTitle("Inicio")
             .task {
                 await viewModel.cargarEquipos()
-                print("En el ViewModel: ", viewModel.equipos.count)
             }
         }
     }

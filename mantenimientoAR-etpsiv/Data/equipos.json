@@ -25,6 +25,15 @@
             "herramientasNecesarias": [],
             "advertenciaSeguridad": null,
             "nombreAnimacionAR": null
+          },
+          {
+              "id": "i4",
+              "orden":2,
+              "titulo":"Desmontaje",
+              "descripcion":"Desmontaje...",
+              "herramientasNecesarias":[],
+              "advertenciaSeguridad":null,
+              "nombreAnimacionAR":null
           }
         ]
       },
@@ -44,6 +53,15 @@
             "herramientasNecesarias": [],
             "advertenciaSeguridad": null,
             "nombreAnimacionAR": null
+          },
+          {
+              "id": "i5",
+              "orden":2,
+              "titulo":"Desmontaje",
+              "descripcion":"Motor detenenido, procede a desmontar la faja inferior.",
+              "herramientasNecesarias":[],
+              "advertenciaSeguridad":null,
+              "nombreAnimacionAR":null
           }
         ]
       },
@@ -63,6 +81,15 @@
             "herramientasNecesarias": [],
             "advertenciaSeguridad": null,
             "nombreAnimacionAR": null
+          },
+          {
+              "id": "i6",
+              "orden":2,
+              "titulo":"Desmontaje faja",
+              "descripcion":"Desmontada la faja inferior, se procede a desmontar la faja superior.",
+              "herramientasNecesarias":[],
+              "advertenciaSeguridad":null,
+              "nombreAnimacionAR":null
           }
         ]
       }

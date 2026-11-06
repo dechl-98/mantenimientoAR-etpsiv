@@ -14,6 +14,9 @@ struct EquipoView: View {
         VStack(alignment: .leading, spacing: 12){
             ModeloView(entidadResaltada: nil)
                 .frame(height: 250)
+            NavigationLink("Iniciar recorrido guiado"){
+                MantenimientoView(equipo: equipo)
+            }
             List(equipo.piezas){
                 pieza in NavigationLink(destination: PiezaView(pieza: pieza)){
                     VStack(alignment: .leading){
@@ -25,6 +28,5 @@ struct EquipoView: View {
             .navigationTitle(equipo.nombre)
         }
         .padding()
-        .navigationTitle(equipo.nombre)
     }
 }
