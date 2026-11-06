@@ -17,6 +17,7 @@ struct MantenimientoView: View {
     
     let equipo: Equipo
     @State private var indice = 0
+    @Environment(\.dismiss) private var dismiss
     
     private var pasos: [PasoGuiado] {
         equipo.piezas
@@ -56,8 +57,14 @@ struct MantenimientoView: View {
                         Button("Anterior") { indice -= 1}
                             .disabled(indice == 0)
                         Spacer()
-                        Button("Siguiente") {indice += 1}
-                            .disabled(indice == pasos.count - 1)
+                        Button(indice == pasos.count - 1 ? "Finalizar" : "Siguiente") {
+                            if indice == pasos.count - 1 {
+                                dismiss()
+                            } else {
+                                indice += 1
+                            }
+                        }
+                            //.disabled(indice == pasos.count - 1)
                     }
                 }
                 .padding()
