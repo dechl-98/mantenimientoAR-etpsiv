@@ -7,22 +7,17 @@
 
 import Foundation
 
+enum ErrorDeCarga: Error {
+    case archivoNoEncontrado(String)
+}
+
 extension Bundle {
-    func decode<T: Decodable>(_ file: String) -> T {
+    func decode<T: Decodable>(_ file: String) throws -> T {
         guard let url = self.url(forResource: file, withExtension: nil) else {
-            fatalError("No se puede encontrar el archivo \(file) desde el Bundle.")
+            throw ErrorDeCarga.archivoNoEncontrado(file)
         }
         
-        guard let data = try? Data(contentsOf: url) else {
-            fatalError("No se puede encontrar el archivo \(file) desde el Bundle.")
-        }
-        
-        let decoder = JSONDecoder()
-        
-        do {
-            return try decoder.decode(T.self, from: data)
-        } catch {
-            fatalError("Error al decodificar \(file): \(error)")
-        }
+        let data = try Data(contentsOf: url)
+        return try JSONDecoder().decode(T.self, from: data)
     }
 }
