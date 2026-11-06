@@ -14,7 +14,7 @@ protocol EquipoServiceProtocol {
 final class EquipoService: EquipoServiceProtocol {
     func obtenerEquipos() async throws -> [Equipo] {
         
-        let equipos: [Equipo] = Bundle.main.decode("equipos.json")
+        let equipos: [Equipo] = try! Bundle.main.decode("equipos.json")
         return equipos
     }
 }

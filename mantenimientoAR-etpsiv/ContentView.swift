@@ -6,15 +6,22 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                List(viewModel.equipos)
-                {
-                    equipo in NavigationLink(equipo.nombre){
-                        EquipoView(equipo: equipo)
+                Group {
+                    if let mensaje = viewModel.mensajeError {
+                        ContentUnavailableView("No se pudo cargar", systemImage: "exclamationmark.triangle", description: Text(mensaje))
+                    } else if viewModel.estaCargando{
+                        ProgressView("Cargando equipos...")
+                    } else {
+                        List(viewModel.equipos) {
+                            equipo in NavigationLink(equipo.nombre){
+                                EquipoView(equipo: equipo)
+                            }
+                        }
                     }
                 }
+                .padding()
+                .navigationTitle("Inicio")
             }
-            .padding()
-            .navigationTitle("Inicio")
             .task {
                 await viewModel.cargarEquipos()
             }
