@@ -1,95 +1,120 @@
 [
   {
     "id": "1",
-    "nombre": "Motor de inyeccion",
+    "nombre": "Motor de inyección",
     "marca": "Black&Decker",
     "modelo": "60/1955",
-    "descripcion": "Motor con 60 caballos de fuerza, industrial a inyección.",
-    "imagenReferencia": null,
+    "descripcion": "Motor industrial de inyección directa con 60 caballos de fuerza (HP). Diseñado para trabajo pesado en bandas transportadoras y maquinaria de ensamblaje. Cuenta con un sistema de transmisión por doble correa (faja) de alta tensión.",
+    "imagenReferencia": "img_ref_motor_bd60",
     "tipoIdentificacion": "seleccionManual",
-    "nombreAnclajeAR": null,
+    "nombreAnclajeAR": "anclaje_base_motor",
     "piezas": [
       {
         "id": "p1",
-        "nombre": "Polea",
-        "descripcion": "Componente de ejemplo para la demo: transmite el movimiento a las fajas.",
-        "advertencias": ["Contenido demostrativo, no sustituye indicaciones del fabricante"],
+        "nombre": "Polea del Cigüeñal",
+        "descripcion": "Rueda maciza de acero acanalada que transmite la fuerza motriz del cigüeñal hacia las fajas de transmisión y accesorios.",
+        "advertencias": [
+          "Riesgo de atrapamiento: Asegúrese de que el motor esté completamente bloqueado y sin energía (LOTO).",
+          "No golpear con martillos metálicos para evitar deformaciones en los canales."
+        ],
         "ordenVisualizacion": 1,
         "nombreEntidad": "polea_visual_ref",
         "instrucciones": [
           {
             "id": "i1",
             "orden": 1,
-            "titulo": "Inspección visual",
-            "descripcion": "Paso de ejemplo, no es un procedimiento oficial.",
-            "herramientasNecesarias": [],
-            "advertenciaSeguridad": null,
-            "nombreAnimacionAR": null
+            "titulo": "Inspección visual de desgaste",
+            "descripcion": "Verifique los bordes y canales de la polea utilizando una linterna. Busque grietas, fisuras, o acumulación de residuos metálicos que indiquen fricción excesiva.",
+            "herramientasNecesarias": [
+              "Linterna de inspección",
+              "Calibrador Vernier"
+            ],
+            "advertenciaSeguridad": "Utilice gafas de seguridad para protegerse de partículas de polvo al inspeccionar de cerca.",
+            "nombreAnimacionAR": "anim_resaltar_canales_polea"
           },
           {
-              "id": "i4",
-              "orden":2,
-              "titulo":"Desmontaje",
-              "descripcion":"Desmontaje...",
-              "herramientasNecesarias":[],
-              "advertenciaSeguridad":null,
-              "nombreAnimacionAR":null
+            "id": "i4",
+            "orden": 2,
+            "titulo": "Desmontaje de la Polea",
+            "descripcion": "Afloje la tuerca central de retención en sentido antihorario. Utilice el extractor para retirar la polea del eje sin dañar la cuña de alineación.",
+            "herramientasNecesarias": [
+              "Llave de vaso de 24mm",
+              "Extractor de poleas de 3 garras",
+              "Llave de impacto (opcional)"
+            ],
+            "advertenciaSeguridad": "Cuidado con la caída de la pieza; la polea es pesada. Mantenga las manos fuera del área de pinzamiento del extractor.",
+            "nombreAnimacionAR": "anim_extraer_polea_eje"
           }
         ]
       },
       {
         "id": "p2",
-        "nombre": "Faja inferior",
-        "descripcion": "Componente de ejemplo para la demo.",
-        "advertencias": ["Contenido demostrativo, no sustituye indicaciones del fabricante"],
+        "nombre": "Faja inferior (Transmisión Principal)",
+        "descripcion": "Correa dentada de caucho reforzado con fibra de vidrio. Sincroniza el movimiento entre el cigüeñal y el árbol de levas inferior.",
+        "advertencias": [
+          "No doblar, torcer o pellizcar la faja nueva bajo ninguna circunstancia.",
+          "Cualquier contaminación con aceite o refrigerante requiere su reemplazo inmediato."
+        ],
         "ordenVisualizacion": 2,
         "nombreEntidad": "faja_inf",
         "instrucciones": [
           {
             "id": "i2",
             "orden": 1,
-            "titulo": "Inspección visual",
-            "descripcion": "Paso de ejemplo, no es un procedimiento oficial.",
-            "herramientasNecesarias": [],
-            "advertenciaSeguridad": null,
-            "nombreAnimacionAR": null
+            "titulo": "Medición de tensión",
+            "descripcion": "Presione el centro del tramo más largo de la faja con el tensiómetro. La deflexión no debe superar los 5 mm con una fuerza de 10 kg.",
+            "herramientasNecesarias": [
+              "Tensiómetro de correas mecánico o sónico"
+            ],
+            "advertenciaSeguridad": "Asegúrese de que el sistema de poleas esté a temperatura ambiente antes de medir para evitar lecturas falsas.",
+            "nombreAnimacionAR": "anim_medir_deflexion_faja"
           },
           {
-              "id": "i5",
-              "orden":2,
-              "titulo":"Desmontaje",
-              "descripcion":"Motor detenenido, procede a desmontar la faja inferior.",
-              "herramientasNecesarias":[],
-              "advertenciaSeguridad":null,
-              "nombreAnimacionAR":null
+            "id": "i5",
+            "orden": 2,
+            "titulo": "Desmontaje de la Faja Inferior",
+            "descripcion": "Con el motor totalmente detenido y bloqueado, afloje el tornillo del tensor de rodillo para liberar la tensión. Deslice la faja cuidadosamente hacia afuera empezando por la polea más pequeña.",
+            "herramientasNecesarias": [
+              "Llave combinada de 14mm",
+              "Palanca pequeña de punta plana"
+            ],
+            "advertenciaSeguridad": "No apalanque contra bordes afilados que puedan astillar las poleas adyacentes.",
+            "nombreAnimacionAR": "anim_liberar_tensor_faja_inf"
           }
         ]
       },
       {
         "id": "p3",
-        "nombre": "Faja superior",
-        "descripcion": "Componente de ejemplo para la demo.",
-        "advertencias": ["Contenido demostrativo, no sustituye indicaciones del fabricante"],
+        "nombre": "Faja superior (Correa de Accesorios)",
+        "descripcion": "Correa trapezoidal (V-belt) de servicio pesado responsable de mover la bomba de inyección de alta presión y el alternador.",
+        "advertencias": [
+          "Verifique la alineación de las poleas antes de instalar una faja nueva; la desalineación causa desgaste prematuro.",
+          "Esta faja maneja alta fricción y puede estar caliente tras apagar el motor."
+        ],
         "ordenVisualizacion": 3,
         "nombreEntidad": "faja_sup",
         "instrucciones": [
           {
             "id": "i3",
             "orden": 1,
-            "titulo": "Inspección visual",
-            "descripcion": "Paso de ejemplo, no es un procedimiento oficial.",
-            "herramientasNecesarias": [],
-            "advertenciaSeguridad": null,
-            "nombreAnimacionAR": null
+            "titulo": "Inspección de agrietamiento",
+            "descripcion": "Revise la cara interna (dentada o en V) a lo largo de toda la circunferencia buscando grietas transversales, pérdida de material o deshilachado de los bordes.",
+            "herramientasNecesarias": [
+              "Espejo de inspección telescópico"
+            ],
+            "advertenciaSeguridad": "Utilice guantes de nitrilo para proteger sus manos de residuos de caucho vulcanizado caliente.",
+            "nombreAnimacionAR": "anim_rotar_inspeccion_faja_sup"
           },
           {
-              "id": "i6",
-              "orden":2,
-              "titulo":"Desmontaje faja",
-              "descripcion":"Desmontada la faja inferior, se procede a desmontar la faja superior.",
-              "herramientasNecesarias":[],
-              "advertenciaSeguridad":null,
-              "nombreAnimacionAR":null
+            "id": "i6",
+            "orden": 2,
+            "titulo": "Desmontaje faja superior",
+            "descripcion": "Habiendo desmontado primero la faja inferior por cuestiones de espacio, pivote el alternador aflojando su perno guía para quitar la tensión de la faja superior y retírela de las ranuras.",
+            "herramientasNecesarias": [
+              "Llave de trinquete de 15mm"
+            ],
+            "advertenciaSeguridad": "Sostenga el alternador firmemente al aflojar el tornillo guía para evitar que caiga de golpe y machuque sus dedos.",
+            "nombreAnimacionAR": "anim_pivote_alternador_quitar_faja"
           }
         ]
       }
