@@ -17,6 +17,9 @@ struct EquipoView: View {
             NavigationLink("Iniciar recorrido guiado"){
                 MantenimientoView(equipo: equipo)
             }
+            NavigationLink("Ver en Realidad Aumentada"){
+                ARModeloView()
+            }
             List(equipo.piezas){
                 pieza in NavigationLink(destination: PiezaView(pieza: pieza)){
                     VStack(alignment: .leading){
