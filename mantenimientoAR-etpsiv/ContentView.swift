@@ -21,6 +21,11 @@ struct ContentView: View {
                 }
                 .padding()
                 .navigationTitle("Inicio")
+                .toolbar{
+                    NavigationLink("AR") {
+                        ARModeloView()
+                    }
+                }
             }
             .task {
                 await viewModel.cargarEquipos()
