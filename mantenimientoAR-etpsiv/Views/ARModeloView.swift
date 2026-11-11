@@ -50,8 +50,8 @@ struct ARModeloView: View {
             DragGesture()
                 .targetedToEntity(motor)
                 .onChanged{ value in
-                    let anguloY = giroY + Float(value.translation.width) * 0.1
-                    let anguloX = giroX + Float(value.translation.height) * 0.1
+                    let anguloY = giroY + Float(value.translation.width) * 0.01
+                    let anguloX = giroX + Float(value.translation.height) * 0.01
                     
                     let rotacionY = simd_quatf(angle: anguloY, axis: [0, 1, 0])
                     let rotacionX = simd_quatf(angle: anguloX, axis: [1, 0, 0])
