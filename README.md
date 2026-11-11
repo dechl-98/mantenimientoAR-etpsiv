@@ -1,31 +1,46 @@
-# Mantenimiento AR-etpsiv
-Prototipo de una aplicacion iOS de realidad aumentada para consultar instrucciones basicas de mantenimiento de equipos. El aplicativo muestra informacion asociada a las piezas de una maquina mediante una experiencia interactiva.
+# Mantenimiento AR
 
-## Objetivo
-Facilitar la consulta de instrucciones de mantenimiento y seguridad con contenido visual, organizado y facil de seguir.
-## Frameworks y Herramientas
-- RealityKit: Visualizacion e interaccion con contenido 3D.
-- Reality Composer Pro: Preparacion de escenas y recursos 3D.
-- SwiftUI: Creacion de la interfaz de la alicacion.
-- Xcode: Desarrollo y pruebas del proyecto.
-## Funcionalidades del prototipo
-- Seleccion de un equipo.
-- Consulta de sus componentes.
-- Visualizacion de instrucciones de mantenimiento.
-- Presentacion de contenido 3D o de realidad aumentada.
+Prototipo académico de una app iOS para consultar instrucciones de mantenimiento de un equipo, con visor 3D interactivo, guía paso a paso y visualización en realidad aumentada.
+
+## Funcionalidades
+- Catálogo de equipos y sus piezas (datos en JSON local)
+- Visor 3D con RealityKit: rotación y resaltado de la pieza seleccionada
+- Mantenimiento guiado: cada paso resalta su pieza en el modelo
+- Realidad aumentada: el modelo aparece frente a la cámara y se puede
+  girar y escalar con gestos
+- Manejo de errores de carga, con mensaje visible al usuario
+
+## Tecnologías
+Swift, SwiftUI, RealityKit, Reality Composer Pro 3, arquitectura MVVM.
+
+## Arquitectura
+JSON → Service → ViewModel → View
+
+- `Models`: Equipo, Pieza, Instruccion (Codable)
+- `Services`: lectura del JSON, detrás de un protocolo
+- `ViewModels`: estado de pantalla y errores
+- `Views`: catálogo, equipo, pieza, visor 3D, mantenimiento y AR
+
 ## Requisitos
-- Una Mac con una version compatible de Xcode (27.1).
-- Reality Composer Pro para preparar o editar recursos 3D.
-- Un dispositivo compatible o simulador para probar la apliacion, segun la plataforma seleccionada.
-## Como abrir el proyecto?
-1. Clona o descarga este repositorio.
-2. Abre 'mantenimientoAR.xcodeproj' o 'mantenimientoAR.xcworkspace' en Xcode, segun sea el archivo.
-3. Selecciona el destino de ejecucion disponible.
-4. Ejecuta el aplicativo desde Xcode.
-## Estado
-Proyecto academico en desarrollo. Las instrucciones y los estados incluidos son demostrativos y no sustituyen las indicaciones oficiales de mantenimiento de los fabricantes.
-## Autoria
-- Proyecto realizado por: David Chavez
-- Asignatura: ETPS-4
-- Institucion: UTEC
-- Curso: Ciclo X/2026
+- Xcode 27.0
+- iOS 18.6 o superior
+- La AR requiere un iPhone o iPad físico; el simulador no tiene cámara
+
+## Cómo ejecutarlo
+1. Clona el repositorio.
+2. Abre `mantenimientoAR-etpsiv.xcodeproj` en Xcode.
+3. Elige un dispositivo o simulador y presiona Cmd + R.
+
+## Limitaciones
+- Los equipos y procedimientos son **demostrativos** y no sustituyen las
+  indicaciones del fabricante.
+- En AR, el modelo se coloca en un punto fijo frente a la cámara; no
+  detecta superficies ni reconoce el equipo real.
+- La identificación del equipo es manual, desde el catálogo.
+
+## Trabajo futuro
+Anclaje a superficies reales, reconocimiento del equipo por cámara o QR, y resaltado de la pieza del paso actual dentro de la AR.
+
+## Autoría
+David Chavez · ETPS-4 · UTEC · Ciclo X/2026
+
